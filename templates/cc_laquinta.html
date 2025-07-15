@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro Comercial La Quinta</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <style>
+    .section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
+    .back {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .back a {
+      color: #005f73;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Centro Comercial La Quinta</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="section" style="text-align: center;">
+      <img src="https://www.laquinta.com.co/wp-content/uploads/2022/11/logolaquinta@2x.png" alt="Logo La Quinta" style="max-width: 250px;">
+    </div>
+
+    <div class="section">
+      <h2>Información General</h2>
+      <p><strong>Dirección:</strong> Cra. 36 #49-45, Cabecera del Llano, Bucaramanga</p>
+      <p><strong>Horario:</strong></p>
+      <ul>
+        <li>Lunes a Sábado: 08:00 - 22:00</li>
+        <li>Domingos: 09:00 - 21:00</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Servicios y Atracciones</h2>
+      <ul>
+        <li>Zona gourmet y cafés</li>
+        <li>Tiendas de moda y accesorios</li>
+        <li>Parqueadero cubierto</li>
+        <li>Eventos de temporada</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Ubicación en el mapa</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.797751925528!2d-73.11814012571127!3d7.108655816097423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f949ca2a3df%3A0xa61a739b2ed10707!2sCentro%20Comercial%20La%20Quinta!5e0!3m2!1ses!2sco!4v1720360640039!5m2!1ses!2sco" 
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="back">
+      <a href="{% url 'index' %}">← Volver a la página principal</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

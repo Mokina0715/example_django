@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro Comercial Cacique</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <style>
+    .section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+    }
+    .back {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .back a {
+      color: #005f73;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Centro Comercial Cacique</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="section" style="text-align: center;">
+      <img src="https://www.caciquecc.com/assets/images/logo-black.png" alt="Logo Cacique" style="max-width: 250px;">
+    </div>
+
+    <div class="section">
+      <h2>Información General</h2>
+      <p><strong>Dirección:</strong> Transversal 93 N° 34 99, El Tejar, Bucaramanga</p>
+      <p><strong>Horario:</strong> Lunes a Domingo, 08:00 - 22:00</p>
+    </div>
+
+    <div class="section">
+      <h2>Servicios y Atracciones</h2>
+      <ul>
+        <li>Salas de cine Cine Colombia</li>
+        <li>Zona de restaurantes y comida rápida</li>
+        <li>Parqueadero amplio</li>
+        <li>Zona infantil y juegos</li>
+        <li>Tiendas por departamento</li>
+        <li>Eventos culturales y comerciales</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Ubicación en el mapa</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.831520327915!2d-73.10825942571164!3d7.105615016116969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f92915342e5%3A0x667cc89e0e09cf96!2sCentro%20Comercial%20Cacique!5e0!3m2!1ses!2sco!4v1720360500034!5m2!1ses!2sco" 
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="back">
+      <a href="{% url 'index' %}">← Volver a la página principal</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
