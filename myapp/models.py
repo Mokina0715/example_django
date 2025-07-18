@@ -21,9 +21,17 @@ class Tienda(models.Model):
     categoria = models.CharField(max_length=50)
     horario_apertura = models.TimeField()
     horario_cierre = models.TimeField()
+    url = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.nombre} ({self.categoria}) - {self.centro_comercial.nombre}"
 
     class Meta:
         verbose_name_plural = "Locales"
+
+class Archivo(models.Model):
+    nombre = models.CharField(max_length=100)
+    upload = models.FileField(upload_to="uploads/")
+
+    def __str__(self):
+        return self.nombre
